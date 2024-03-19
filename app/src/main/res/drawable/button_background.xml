@@ -1,0 +1,9 @@
+<!-- res/drawable/custom_button_dark_red.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#8B0000"/> <!-- Replace with your desired dark red color -->
+            <corners android:radius="10dp"/>
+        </shape>
+    </item>
+</selector>

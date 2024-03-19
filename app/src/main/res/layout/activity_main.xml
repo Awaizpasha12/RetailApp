@@ -1,0 +1,113 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/toolbar_layout"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/main_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/main_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/toolbar"/>
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/main_icon"
+        android:hint="Email"
+        android:padding="10dp"
+        android:layout_margin="20dp"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/email_input_background"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/getOtpButton"
+        android:textColor="@color/white"
+        android:layout_width="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailEditText"
+        android:background="@drawable/button_background"
+        android:text="GET OTP"/>
+
+    <LinearLayout
+        android:id="@+id/otpLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/getOtpButton"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/etOtp1"
+            style="@style/OtpEditText"
+            android:inputType="number"
+            android:maxLength="1"
+            android:background="@drawable/otp_border_background"/>
+
+        <EditText
+            android:id="@+id/etOtp2"
+            style="@style/OtpEditText"
+            android:inputType="number"
+            android:maxLength="1"
+            android:background="@drawable/otp_border_background"/>
+
+
+        <EditText
+            android:id="@+id/etOtp3"
+            style="@style/OtpEditText"
+            android:inputType="number"
+            android:maxLength="1"
+            android:background="@drawable/otp_border_background"/>
+
+
+        <EditText
+            android:id="@+id/etOtp4"
+            style="@style/OtpEditText"
+            android:inputType="number"
+            android:maxLength="1"
+            android:background="@drawable/otp_border_background"/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginButton"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/otpLayout"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/disabled_button_background"
+        android:text="LOGIN" />
+
+    <FrameLayout
+        android:id="@+id/overlayFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D8000000"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+    <!-- Toolbar layout here -->
+
+</RelativeLayout>
